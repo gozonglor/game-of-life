@@ -5,9 +5,11 @@ package edu.macalester.comp124.life;
  *
  * @author Michael Ekstrand <ekstrand@cs.umn.edu>
  */
-public class Conway implements RuleSet {
+public class Conway implements RuleSet
+{
 
-    public String getName() {
+    public String getName()
+    {
         return "Conway's Rules";
     }
 
@@ -18,13 +20,16 @@ public class Conway implements RuleSet {
      * @param neighborCount The number of living neighbors of the cell.
      * @return true if the cell should be alive in the next generation.
      */
-    public boolean applyRules(boolean isAlive, int neighborCount) {
-        return true;
+    public boolean applyRules(boolean isAlive, int neighborCount)
+    {
+        if (neighborCount < 2 || neighborCount > 3 )
+            return false;
+        else if (neighborCount == 3)
+            return true;
+        else
+            return isAlive;
     }
 }
-
-
-
 
 
 
