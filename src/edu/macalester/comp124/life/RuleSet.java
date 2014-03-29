@@ -22,4 +22,5 @@ public interface RuleSet {
      * @return The value of the cell in the next generation.
      */
     public boolean applyRules(boolean value, int neighborCount);
+
 }
